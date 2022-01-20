@@ -1,0 +1,38 @@
+@import "src/styles/colors";
+@import "src/styles/breakpoints";
+
+.row {
+  width: 100%;
+  background: $white;
+  padding: 3px;
+  border-radius: 8px;
+  margin: 5px 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  &:hover {
+    box-shadow: 0 4px 25px $green-shadow;
+    transition: all 0.2s;
+  }
+
+  @media (max-width: $tablets ) {
+    margin: 10px 0;
+    box-shadow: 0 4px 25px rgba(6, 98, 59, 0.15);
+  }
+}
+
+.rowContain {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $tablets ) {
+    display: block;
+  }
+}
+
+.cell {
+  padding: 7.5px;
+}

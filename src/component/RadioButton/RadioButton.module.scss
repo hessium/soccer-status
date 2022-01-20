@@ -1,0 +1,55 @@
+@import "src/styles/colors";
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.text {
+  position: relative;
+  font-size: 14px;
+  line-height: 14px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.roundGreen .input + span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.roundGreen .input + span::before {
+  content: "";
+  display: inline-block;
+  border: 2px solid $red;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-position: 8px 9px;
+  width: 17px;
+  height: 17px;
+}
+
+.roundGreen:hover .input + span::before {
+  border-color: $green-saturated;
+}
+
+.roundGreen .input:checked + span::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  border: 3px solid $white;
+  background-color: $green;
+  background-image: none;
+  visibility: visible;
+  width: 11px;
+  height: 11px;
+}
+
+.roundGreen:hover .input:checked + span::after {
+  background: $green-saturated;
+}

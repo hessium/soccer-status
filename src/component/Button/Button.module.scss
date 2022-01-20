@@ -1,0 +1,28 @@
+@import "src/styles/colors";
+
+.button {
+  border: 0;
+  outline: none;
+  background: transparent;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+
+  &:hover {
+   cursor: pointer;
+  }
+}
+
+
+
+.rounded {
+  padding: 10px 20px;
+  background: $green;
+  border-radius: 30px;
+  color: $white;
+}
+
+.square {
+  width: 24px;
+  height: 24px;
+}

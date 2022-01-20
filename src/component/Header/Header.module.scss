@@ -1,0 +1,282 @@
+@import "src/styles/breakpoints";
+@import "src/styles/colors";
+
+.headerTop {
+  display: flex;
+  width: 100%;
+  background: $white;
+  padding: 0 60px;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  background: $red;
+
+  @media (max-width: $phones ) {
+    padding: 0;
+  }
+}
+
+.wrap {
+  display: flex;
+  width: 100%;
+  background: $white;
+  padding: 0 40px;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+
+  @media (max-width: $phones ) {
+    padding: 0;
+    height: 0;
+  }
+}
+
+.mobileNavBtn {
+  margin: 20px 20px;
+
+  svg {
+    fill: $white;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.logo {
+  color: $white;
+  font-weight: bold;
+
+  @media (max-width: $phones) {
+    margin-right: 40px;
+  }
+}
+
+.navMenu {
+  top: 70px;
+  width: 100%;
+  background: $white;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $phones) {
+    position: fixed;
+    display: block;
+    padding: 5px 0 0;
+    z-index: 100;
+    top: 0;
+    width: 0;
+    height: 100vh;
+    background: transparent;
+    background: $green;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+}
+
+.active {
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.navList {
+  width: 421px;
+  height: 60px;
+  color: $red;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $phones) {
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+}
+
+.navListItem {
+  padding: 0 20px;
+  border-right: 1px solid rgba(6, 98, 59, 0.3);
+  z-index: 5;
+
+  &:last-child {
+    border: 0;
+  }
+
+  &:hover {
+    cursor: default;
+  }
+
+  @media (max-width: $phones ) {
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    color: $white;
+  }
+}
+
+.navListItem:hover .dropDownList {
+  visibility: visible;
+}
+
+.listItemLink {
+  display: flex;
+  align-items: center;
+  color: $red;
+
+  svg {
+    margin-left: 10px;
+    fill: $green;
+  }
+
+  @media (max-width: $phones ) {
+    color: $white;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.dropDownList {
+  position: absolute;
+  visibility: hidden;
+  left: 10px;
+  top: 70px;
+  padding-top: 70px;
+
+  @media (max-width: $phones ) {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    padding: 0;
+    transition: all 0.3s;
+  }
+}
+
+.dropDownSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  background: white;
+  box-shadow: 0 4px 20px rgba(2, 24, 15, 0.15);
+  border-radius: 8px;
+  top: 70px;
+
+  @media (max-width: $phones) {
+    display: block;
+    background: $green;
+    padding: 0;
+    box-shadow: none;
+    height: 100vh;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.closeSubMenu {
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 17px;
+  font-weight: normal;
+  color: $white;
+  padding: 22px 15px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  svg {
+    fill: $white;
+    margin-right: 13px;
+    width: 14px;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.seeAllLink {
+  margin: 0 35px 0 30px;
+}
+
+.allProductText {
+  padding-top: 25px;
+}
+
+.sublistItem {
+  padding: 4px 25px;
+}
+
+.sublistItemLink {
+  font-size: 16px;
+  line-height: 15px;
+  color: $green;
+  padding: 5px 10px;
+  white-space: nowrap;
+
+  &:hover {
+    background: $green-light;
+    border-radius: 8px;
+  }
+
+  @media (max-width: $phones) {
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+
+    &:hover {
+      background: transparent;
+      opacity: 0.5;
+    }
+  }
+}
+
+.desktop {
+  display: block;
+
+  @media (max-width: $phones ) {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+
+  @media (max-width: $phones ) {
+    display: block;
+  }
+}
+
+@media (max-width: $phones ) {
+  .closeBtn {
+    margin-left: 24px;
+    font-weight: normal;
+
+    svg {
+      width: 17px;
+      height: 17px;
+    }
+  }
+
+  .subMenuActive {
+    left: 0;
+    visibility: visible;
+    transition: all 0.3s;
+  }
+}

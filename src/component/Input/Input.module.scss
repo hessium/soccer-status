@@ -1,0 +1,11 @@
+@import "src/styles/colors";
+@import "src/styles/breakpoints";
+
+.input {
+  height: 30px;
+  border-radius: 15px;
+  border: 1px solid $green;
+  outline: none;
+  padding-left: 10px;
+  width: 300px;
+}

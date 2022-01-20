@@ -1,0 +1,64 @@
+@import "src/styles/colors";
+@import "src/styles/breakpoints";
+
+.page {
+  min-height: 100vh;
+  width: 100%;
+  background: $blue;
+}
+
+.wrapSpinner {
+  padding-top: 30px;
+  width: 100%;
+}
+
+.wrap {
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 30px 0 0;
+
+  @media (max-width: $tablets) {
+    padding: 20px 20px;
+  }
+}
+
+.international {
+  max-width: 450px;
+}
+
+.teamsLink {
+  background: $blue;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+.topContain {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  align-items: center;
+}
+
+.contain {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.inner {
+  width: calc(50% - 10px);
+  display: flex;
+
+  @media (max-width: $phones) {
+    width: 100%;
+  }
+}
+
+.card {
+  width: 100%;
+}
+
+.areaName {
+  margin: 10px 0;
+}
